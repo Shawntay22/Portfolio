@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(48, 65, 49, .5);
+    position: sticky;
+    top: 0;
+    width: 1500px;
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    margin: 20px 0px;
+}
+
+.navbar ul li{
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.3em;
+    font-style: italic;
+    font-weight: bold;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 8px 25px;
+    transition: all 3s ease-in-out;
+    box-shadow: 0 0 10px grey;
+}
+/* I would like to add a hover box-shadow, but it is not working yet. */
+.navbar ul li a:hover{
+    box-shadow: 0 0 10px black;
+    margin: auto 5px;
+}
+.navbar ul #home-btn a:hover{
+    background-color:rgb(177, 41, 40);
+    color:grey;
+    text-shadow: 1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    transition: 0s;
+    /* I would like to have a 0 transition out. */
+    /* transition: 3s ease-in-out 0s; */
+}
+.navbar ul #about-btn a:hover{
+    background-color:rgb(198, 85, 46);
+    color:grey;
+    text-shadow: 1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    transition: 0s;
+}
+.navbar ul #portfolio-btn a:hover{
+    background-color:rgb(182, 143, 56);
+    color:grey;
+    text-shadow: 1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    transition: 0s;
+}
+.navbar ul #contact-btn a:hover{
+    background-color:rgba(104, 121, 62, .8);
+    color:grey;
+    text-shadow: 1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    transition: 0s;
+}
+
+/* Home Section */
+/* I would like both nab bar and home bar to reach across the whole page at every size. */
+#home{
+    display: flex;
+    flex-direction: column;
+    background: rgba(48, 65, 49, .5);
+    height: 200px; 
+    width: 1500px;
+}
+#home::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    /* I would like to set the background be a bit more centered, and scroll so that "Shawntay Smith ~ Web Development stays in the center of the screen */
+    background-image: url('./portfolioBackground.png');
+    background-repeat: no-repeat;
+    background-attachment: center;
+    background-position: cover;
+    background-size: cover;
+    height: 2000px;
+    width: 1500px;
+    z-index: -1;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 15%;
+    right: 0%;
+}
+.headings{
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 3em;
+    text-align: center;
+    margin: 40px 0px;
+    color: rgb(0, 0, 0);
+}
+.btn{
+    padding:10px 35px;
+    background-color: transparent;
+    border: .5px solid gray;
+    color: white;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1em;
+    font-style: italic;
+    font-weight: bold;
+    box-shadow: 0 0 10px grey;
+}
+.btn:hover{
+    background-color:rgb(138, 62, 62);
+    color:rgb(160, 160, 160);
+    text-shadow: 1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-weight: bold;
+}
+
+/* About Section */
+#about{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 600px;
+    background-color: grey;
+    opacity: .5;
+}
